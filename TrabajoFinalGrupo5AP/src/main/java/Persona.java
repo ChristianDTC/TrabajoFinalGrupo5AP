@@ -1,9 +1,9 @@
 public class Persona {
 
-    private int dni
-    private String nombre
-    private String apellido
-    private String contacto
+    private int dni;
+    private String nombre;
+    private String apellido;
+    private String contacto;
 
     public Persona(int dni, String nombre, String apellido, String contacto) {
         this.dni = dni;
