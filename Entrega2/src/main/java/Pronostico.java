@@ -1,15 +1,33 @@
-// Es el pronostico de UN partido
-
 public class Pronostico {
 
+    private int dni;
+    private int nroRonda;
     private String equpo1;
     private String equipo2;
     private Resultado resultado;       // EMPATE, GANO1, GANO2
 
-    public Pronostico(String equpo1, String equipo2, Resultado resultado) {
+    public Pronostico(int dni, int nroRonda, String equpo1, String equipo2, Resultado resultado) {
+        this.dni = dni;
+        this.nroRonda = nroRonda;
         this.equpo1 = equpo1;
         this.equipo2 = equipo2;
         this.resultado = resultado;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public int getNroRonda() {
+        return nroRonda;
+    }
+
+    public void setNroRonda(int nroRonda) {
+        this.nroRonda = nroRonda;
     }
 
     public String getEqupo1() {
@@ -37,7 +55,7 @@ public class Pronostico {
     }
     @Override
     public String toString() {
-        return equpo1 + " vs " + equipo2 + " - resultado: " + resultado;
+        return "DNI: " + dni + "\t Ronda: " + nroRonda + "\t" + equpo1 + " vs " + equipo2 + " - resultado: " + resultado;
     }
 
 

@@ -1,13 +1,11 @@
-// Hace referncia al registro de una persona que juega al ProDe
-
-import java.util.HashMap;
-
 public class Persona {
 
     private int dni;
     private String nombre;
     private String apellido;
+
     private int puntaje = 0;
+    private int aciertos = 0;
 
 
     public Persona(int dni, String nombre, String apellido) {
@@ -44,24 +42,32 @@ public class Persona {
         return puntaje;
     }
 
+    public int getAciertos() {
+        return aciertos;
+    }
+
+    public void calcularPuntaje(Torneo torneo , Juego juego) {
+
+        int indiceTorneo = 0;
+
+        for (int i = 0; i < juego.cantidadPronosticos(); i++) {
+
+            if (juego.get(i).getDni() == this.dni) {
+
+                if (juego.consultarResultado(i) == torneo.consultarResultado(indiceTorneo)) {
+                    puntaje++;
+                    aciertos++;
+                }
+
+                indiceTorneo++;
+            }
+        }
+    }
 
     @Override
     public String toString() {
-        return "DNI: " + dni + ", " + nombre + " " + apellido + ", tiene " + puntaje + " puntos. Contacto: ";
+        return nombre + " " + apellido + " ,DNI: " + dni + ", tiene " + puntaje + " puntos y acertó " + aciertos + " pronósticos.";
     }
 
-    //   public void cargarPuntaje(Torneo torneo) {              // no terminado. salta error
-
-    //   for (int i = 1; i <= torneo.cantidadRondas() ; i++)         //recorre todas las rondas del torneo
-
-    // for (int j = 0; j < torneo.obtenerRonda(i).cantidadPartidos(); j++) {   //recorre todos los partidos
-    //  if (torneo.obtenerRonda(i).consultarResultado(j) == obtenerPronRonda(i).contularResultado(j)) {
-    //   puntaje ++; }
-    //  }
 
 }
-
-
-
-
-

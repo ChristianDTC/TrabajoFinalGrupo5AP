@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e96e624-6bb8-4833-8c6a-fbc5d9e6ba6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Partido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PronDeRonda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PronDeRonda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pronostico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.~lock.pronostico.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PronDeRonda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PronDeRonda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Entrega2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Entrega2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Entrega2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Entrega2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -35,20 +37,21 @@
     </option>
   </component>
   <component name="ProjectId" id="2Nn7CPFTDmv97gNqhAePNg8J01D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/COLOMBO/Daniel/Desarrollador Java Inicial - Argentina Programa 4.0/TrabajoPracticoIntegrador/Entrega1",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/COLOMBO/Daniel/Desarrollador Java Inicial - Argentina Programa 4.0/TrabajoPracticoFinal Grupal/TrabajoFinalGrupo5AP/Entrega1&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\COLOMBO\Daniel\Desarrollador Java Inicial - Argentina Programa 4.0\TrabajoPracticoIntegrador\src\main\resources" />
@@ -57,6 +60,21 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\COLOMBO\Daniel\Desarrollador Java Inicial - Argentina Programa 4.0\TrabajoPracticoIntegrador\src\main" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Entrega1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Entrega1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -71,5 +89,10 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>

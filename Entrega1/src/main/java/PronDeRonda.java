@@ -32,7 +32,7 @@ public class PronDeRonda {
         if (Files.exists(archivo)) {
 
             Scanner lectorDesdeArchivo = new Scanner(archivo);
-            lectorDesdeArchivo.useDelimiter("[,;\\n\\r]");
+            lectorDesdeArchivo.useDelimiter("[,;\\n]");
 
             while (lectorDesdeArchivo.hasNext()) {
                 String equipo1 = lectorDesdeArchivo.next();

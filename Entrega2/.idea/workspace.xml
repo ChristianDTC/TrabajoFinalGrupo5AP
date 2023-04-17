@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6fafb50-d180-4c00-bff6-a42cf6fab92a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
+    <list default="true" id="a6fafb50-d180-4c00-bff6-a42cf6fab92a" name="Changes" comment="Entrega 2 terminada y funcionando">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Torneo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Torneo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,19 +27,21 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2OAYQRe1K5KE49XnPNpfGZ8kRKW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/COLOMBO/Daniel/Desarrollador Java Inicial - Argentina Programa 4.0/TrabajoPracticoIntegrador/Entrega1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last.edited.regexp": "1,Paraguay,Perú,2",
+    "last_opened_file_path": "D:/COLOMBO/Daniel/Desarrollador Java Inicial - Argentina Programa 4.0/TrabajoPracticoIntegrador/Entrega2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,10 +51,73 @@
       <option name="presentableId" value="Default" />
       <updated>1681004837305</updated>
     </task>
+    <task id="LOCAL-00001" summary="Restauracion de Proyecto.&#10;Problemas con Matcher en clase Juego">
+      <created>1681664099115</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681664099115</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Clase Juego lee los campos con Scanner.&#10;Clase Torneo lee los campos con Scanner.">
+      <created>1681666746865</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681666746865</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Clase Juego lee los campos con Scanner.&#10;Clase Torneo con regex">
+      <created>1681667999421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681667999421</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Entrega 2 terminada y funcionando">
+      <created>1681668699520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681668699520</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="Restauracion de Proyecto.&#10;Problemas con Matcher en clase Juego" />
+    <MESSAGE value="Clase Juego funciona con Matcher.&#10;Clase Torneo funciona con metodo antiguo." />
+    <MESSAGE value="Clase Juego lee los campos con Scanner.&#10;Clase Torneo lee los campos con Scanner." />
+    <MESSAGE value="Clase Juego lee los campos con Scanner.&#10;Clase Torneo con regex" />
+    <MESSAGE value="Entrega 2 terminada y funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entrega 2 terminada y funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

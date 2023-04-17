@@ -3,39 +3,29 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Juego {
-    public HashMap<Integer,PronTorneo> jugadores;          // Key = dni
-
-    public Juego() {jugadores = new HashMap<>();
+    public ArrayList<Pronostico> juego;
+    public Juego() {juego = new ArrayList<>();
     }
 
-    public PronTorneo obtenerJugador(int dni) {
-        return jugadores.get(dni);
+    public Pronostico get(int indice) {
+        return juego.get(indice);
+    }
+    public Resultado consultarResultado(int indice) {
+        return juego.get(indice).getResultado();
     }
 
-    public void agregarJugador(Integer dni , PronTorneo pronTorneo) {
-        jugadores.put(dni, pronTorneo);
+    public void agregarPronostico(Pronostico pronostico){
+        juego.add(pronostico);
     }
 
-    public int cantidadJugadores() {
-        return jugadores.size();
+    public int cantidadPronosticos() {
+        return juego.size();
     }
-
-    public int cantidadTotalPronosticos() {
-
-        int cantidad = 0;
-        for (PronTorneo value : jugadores.values()) {
-            for (int i = 0; i < value.cantidadPronRondas(); i++) {
-
-                cantidad += value.obtenerCarton(i+1).cantidadPronosticos();     // debería crear un metodo en PronTorneo equivalente a HashMap.value y reemplazar "obtenerCarton"
-            }
-        }
-        return cantidad;
-    }
-
 
     public void cargarPronosticos(String archivoCSV) throws IOException {
         String carpetaResources = "src\\main\\resources\\";
@@ -46,69 +36,36 @@ public class Juego {
             Scanner lectorDesdeArchivo = new Scanner(archivo);
             lectorDesdeArchivo.useDelimiter("[,;\\n]");
 
-            lectorDesdeArchivo.nextLine();     //Primera línea contiene nombre de los campos de atributos
-
-            PronTorneo pronosticoDeUnaPersona = new PronTorneo();
-
-            int dniControl = lectorDesdeArchivo.nextInt();
-            int dniLeido = dniControl;
-            int nroRondaControl = lectorDesdeArchivo.nextInt();
-            int nroRondaLeido = nroRondaControl;
-
+            lectorDesdeArchivo.nextLine();     //Salteo primera línea, contiene nombre de los campos de atributos
 
             while (lectorDesdeArchivo.hasNext()) {
 
-                while (dniLeido == dniControl) {
+                int dni = lectorDesdeArchivo.nextInt();
+                int nroRonda = lectorDesdeArchivo.nextInt();
+                String equipo1 = lectorDesdeArchivo.next();
+                String equipo2 = lectorDesdeArchivo.next();
 
-                    Carton nuevoCarton = new Carton();
+                Resultado resultado = null;
+                if (!lectorDesdeArchivo.next().isBlank())
+                    resultado = Resultado.GANO1;
+                if (!lectorDesdeArchivo.next().isBlank())
+                    resultado = Resultado.GANO2;
+                if (!lectorDesdeArchivo.next().isBlank())
+                    resultado = Resultado.EMPATE;
 
-                    while (nroRondaLeido == nroRondaControl) {
-
-
-                        String equipo1 = lectorDesdeArchivo.next();
-                        String equipo2 = lectorDesdeArchivo.next();
-                        Resultado resultado = null;
-
-                        if (!lectorDesdeArchivo.next().isBlank()) {
-                            resultado = Resultado.GANO1;
-                        }
-                        if (!lectorDesdeArchivo.next().isBlank()) {
-                            resultado = Resultado.GANO2;
-                        }
-                        if (!lectorDesdeArchivo.next().isBlank()) {
-                            resultado = Resultado.EMPATE;
-                        }
-
-                        Pronostico nuevoPronostico = new Pronostico(equipo1, equipo2, resultado);
-                        nuevoCarton.agregarPronostico(nuevoPronostico);
-
-                        if (lectorDesdeArchivo.hasNextInt()) {
-                            dniControl = lectorDesdeArchivo.nextInt();
-                            nroRondaLeido = lectorDesdeArchivo.nextInt();
-                        }
-                        else break;
-
-
-                        pronosticoDeUnaPersona.agregarPronRonda(nroRondaControl, nuevoCarton);  // guarda los pronosticos de una ronda/carton
-                    }
-                    nroRondaControl = nroRondaLeido;                                         // actualiza el nroRonda de control
-
-
-
-
-                    agregarJugador(dniControl, pronosticoDeUnaPersona);      // guarda los pronosticos de un jugador de todo el torneo
-                }
-                dniControl = dniLeido;                                  // actualiza el dni de control
-
-
+                Pronostico nuevoPronostico = new Pronostico(dni, nroRonda, equipo1, equipo2, resultado);
+                agregarPronostico(nuevoPronostico);
 
             }
 
-
+            lectorDesdeArchivo.close();
 
         }
+
+        else System.out.println("Error: no se encontró el archivo. \n");
+
     }
 
 
-
 }
+

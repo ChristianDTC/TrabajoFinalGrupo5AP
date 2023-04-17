@@ -1,12 +1,14 @@
 public class Partido {
 
+    private int nroRonda;
     private String equipo1;
     private String equipo2;
     private int golesEquipo1;
     private int golesEquipo2;
     private final Resultado resultado;
 
-    public Partido(String equipo1, String equipo2, int golesEquipo1, int golesEquipo2) {
+    public Partido(int nroRonda, String equipo1, String equipo2, int golesEquipo1, int golesEquipo2) {
+        this.nroRonda = nroRonda;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.golesEquipo1 = golesEquipo1;
@@ -16,6 +18,13 @@ public class Partido {
         else resultado = Resultado.GANO2;
     }
 
+    public int getNroRonda() {
+        return nroRonda;
+    }
+
+    public void setNroRonda(int nroRonda) {
+        this.nroRonda = nroRonda;
+    }
 
     public String getEquipo1() {
         return equipo1;
@@ -56,9 +65,8 @@ public class Partido {
 
     @Override
     public String toString() {
-        return "equipo1: " + equipo1 + ":" + '\t' + golesEquipo1 + '\n' +
-                "equipo2: " + equipo2 + ":" + '\t' + golesEquipo2 + '\n' +
-                "Resultado: " + resultado;
+        return equipo1 + ": " + golesEquipo1 + " - " + equipo2 + ": " + golesEquipo2 + "\t\t" +
+                "Ronda " + nroRonda + "\tResultado: " + resultado;
     }
 
 }
