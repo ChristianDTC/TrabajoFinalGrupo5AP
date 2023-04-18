@@ -1,6 +1,4 @@
 import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Principal {
@@ -8,23 +6,13 @@ public class Principal {
     public static void main(String[] args) throws IOException {
 
         Scanner teclado = new Scanner(System.in);
-        ArrayList<Persona> jugadores = new ArrayList<>();   //  lista de personas que participan en el juego
+        Jugadores jugadores = new Jugadores();              //  lista de personas que participan en el juego
         Torneo LigaConmebol = new Torneo();                 // Nuevo torneo instanciado
         Juego Prode = new Juego();                          // Juego Prode instanciado
 
 
         // carga de personas
-        // pasar a clase JUGADORES (u otro nombre)
-        Scanner lectorDesdeArchivo = new Scanner(Paths.get("src\\main\\resources\\personas.csv"));
-        lectorDesdeArchivo.useDelimiter("[,;\\n\\r]+");
-
-        while (lectorDesdeArchivo.hasNextInt()) {
-            int dni = lectorDesdeArchivo.nextInt();
-            String nom = lectorDesdeArchivo.next();
-            String ape = lectorDesdeArchivo.next();
-            Persona nuevaPersona = new Persona(dni, nom, ape);
-            jugadores.add(nuevaPersona);
-        }
+        jugadores.cargarJugadores();
 
 
         // carga de partidos
@@ -42,12 +30,11 @@ public class Principal {
 
 
         //calcula los puntajes de cada persona comparando los pronósticos con los resultados de los partidos
-        for (Persona jugador : jugadores) {
-            jugador.calcularPuntaje(LigaConmebol,Prode);
-        }
+        jugadores.calcularPuntaje(LigaConmebol,Prode);
+
 
         //muestra los jugadores con el puntaje obtenido
-        for (Persona jugador : jugadores) {
+        for (Persona jugador : jugadores.jugadores) {
             System.out.println(jugador);
         }
 

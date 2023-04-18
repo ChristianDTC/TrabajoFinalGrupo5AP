@@ -55,7 +55,7 @@ public class Persona {
             if (juego.get(i).getDni() == this.dni) {
 
                 if (juego.consultarResultado(i) == torneo.consultarResultado(indiceTorneo)) {
-                    puntaje++;
+                    puntaje += 2;                               // suma 2 puntos por acierto, en la siguiente entrega se podrá modificar
                     aciertos++;
                 }
 
