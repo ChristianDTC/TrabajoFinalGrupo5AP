@@ -13,6 +13,8 @@ public class PronDeRonda {
     private ArrayList<Pronostico> pronosticos;
     private int puntaje = 0;
 
+    private int pronosticosAcertados = 0;
+
     public PronDeRonda() {
         pronosticos = new ArrayList<>();
     }
@@ -25,7 +27,7 @@ public class PronDeRonda {
         return pronosticos.get(i).getResultado();
     }
 
-    public int cantidadPartidos() {
+    public int cantidadPronosticos() {
         return pronosticos.size();
     }
 
@@ -34,7 +36,7 @@ public class PronDeRonda {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/resultados","root","lapaloma");
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("Select * from pronosticos where participante = "+ nombre);
-        if (conn.isValid(5)) {
+        if (conn != null) {
             while (rs.next()) {
 
                 String equipo1 = rs.getString("equipo1");
@@ -59,7 +61,7 @@ public class PronDeRonda {
 
             rs.close();
             conn.close();
-        }else System.out.println("Error: no se encontró el archivo");
+        }else System.out.println("Error: no se pudo conectar");
     }
 
 

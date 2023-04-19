@@ -20,11 +20,11 @@ public class Torneo {
         ronda.cargarPartido(i);
         rondas.add(ronda);
     }
-    public ArrayList<Partido> getTodosLosPartidos (Torneo torneo){
+    public ArrayList<Partido> getTodosLosPartidos (){
         ArrayList<Partido> r = new ArrayList<>();
-        for (int i = 0; i < torneo.cantidadRondas(); i++) {
-            for (int j = 0; j < torneo.getRondas().get(i).cantidadPartidos(); j++) {
-                r.add(torneo.getRondas().get(i).getPartidos().get(j));
+        for (int i = 0; i < rondas.size(); i++) {
+            for (int j = 0; j < rondas.get(i).cantidadPartidos(); j++) {
+                r.add(rondas.get(i).getPartidos().get(j));
             }
         } return r;
 

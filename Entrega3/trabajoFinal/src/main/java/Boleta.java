@@ -36,13 +36,36 @@ public class Boleta {
         boleta.put(nombre, pron);
     }
 
-    public int cargarPuntaje(Torneo torneo, String nombre) {
-        int puntaje = 0;
-        for (int i = 0; i < torneo.getTodosLosPartidos(torneo).size(); i++) {
+    public int todosLosPronosticos (){
+        int total = 0 ;
 
-            if (torneo.getTodosLosPartidos(torneo).get(i).getResultado() == boleta.get(nombre).consultarResultado(i))
+
+
+            for (PronDeRonda ronda : boleta.values()) {
+
+                total += ronda.getPronosticos().size();
+
+            }
+            return total;
+    }
+
+    public void cargarPuntaje(Torneo torneo, String nombre) {
+        int puntaje = 0;
+        for (int i = 0; i < torneo.getTodosLosPartidos().size(); i++) {
+
+            if (torneo.getTodosLosPartidos().get(i).getResultado() == boleta.get(nombre).consultarResultado(i))
                 puntaje++;
-        }   return puntaje;
+        }
+            boleta.get(nombre).setPuntaje(puntaje);
+    }
+    public void getAcertados(Torneo torneo, String nombre) {
+        int puntaje = 0;
+        for (int i = 0; i < torneo.getTodosLosPartidos().size(); i++) {
+
+            if (torneo.getTodosLosPartidos().get(i).getResultado() == boleta.get(nombre).consultarResultado(i))
+                puntaje++;
+        }
+        boleta.get(nombre).setPronosticosAcertados(puntaje);
     }
 
 }

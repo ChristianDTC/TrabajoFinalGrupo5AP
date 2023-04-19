@@ -34,7 +34,7 @@ public class Ronda {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/resultados","root","lapaloma");
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery("Select * from resultados where ronda = "+ i);
-        if (conn.isValid(5)) {
+        if (conn != null) {
             while (rs.next()) {
 
                 String e1 = rs.getString("equipo1");
@@ -48,7 +48,7 @@ public class Ronda {
 
             rs.close();
             conn.close();
-        }else System.out.println("Error: no se encontró el archivo");
+        }else System.out.println("Error: no se pudo conectar");
 
     }
 
