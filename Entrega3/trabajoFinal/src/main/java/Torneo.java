@@ -14,11 +14,14 @@ public class Torneo {
     }
     public int cantidadRondas(){ return rondas.size();}
 
-    public void agregarRonda(int i) throws SQLException, IOException {
+    public void agregarRondas(int i) throws SQLException, IOException {
 
-        Ronda ronda = new Ronda();
-        ronda.cargarPartido(i);
-        rondas.add(ronda);
+        for (int j = 1; j <= i ; j++) {
+            Ronda ronda = new Ronda();
+            ronda.cargarPartido(j);
+            rondas.add(ronda);
+        }
+
     }
     public ArrayList<Partido> getTodosLosPartidos (){
         ArrayList<Partido> r = new ArrayList<>();

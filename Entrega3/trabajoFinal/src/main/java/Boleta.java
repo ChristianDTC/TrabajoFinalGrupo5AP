@@ -29,11 +29,14 @@ public class Boleta {
                 '}';
     }
 
-    public void agregarPronRonda(String nombre) throws SQLException, IOException {
+    public void agregarPronRonda(Participantes p) throws SQLException, IOException {
+        for (int i = 0; i < p.getPersonas().size(); i++) {
 
-        PronDeRonda pron = new PronDeRonda();
-        pron.cargarPronostico(nombre);
-        boleta.put(nombre, pron);
+            PronDeRonda pron = new PronDeRonda();
+            pron.cargarPronostico(p.getPersonas().get(i).getDni());
+            boleta.put(p.getPersonas().get(i).getDni(), pron);
+        }
+
     }
 
     public int todosLosPronosticos (){
@@ -49,23 +52,7 @@ public class Boleta {
             return total;
     }
 
-    public void cargarPuntaje(Torneo torneo, String nombre) {
-        int puntaje = 0;
-        for (int i = 0; i < torneo.getTodosLosPartidos().size(); i++) {
 
-            if (torneo.getTodosLosPartidos().get(i).getResultado() == boleta.get(nombre).consultarResultado(i))
-                puntaje++;
-        }
-            boleta.get(nombre).setPuntaje(puntaje);
-    }
-    public void getAcertados(Torneo torneo, String nombre) {
-        int puntaje = 0;
-        for (int i = 0; i < torneo.getTodosLosPartidos().size(); i++) {
 
-            if (torneo.getTodosLosPartidos().get(i).getResultado() == boleta.get(nombre).consultarResultado(i))
-                puntaje++;
-        }
-        boleta.get(nombre).setPronosticosAcertados(puntaje);
-    }
 
 }

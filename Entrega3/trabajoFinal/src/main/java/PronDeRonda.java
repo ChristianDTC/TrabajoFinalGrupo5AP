@@ -11,9 +11,6 @@ import java.util.Scanner;
 @Getter@Setter
 public class PronDeRonda {
     private ArrayList<Pronostico> pronosticos;
-    private int puntaje = 0;
-
-    private int pronosticosAcertados = 0;
 
     public PronDeRonda() {
         pronosticos = new ArrayList<>();
