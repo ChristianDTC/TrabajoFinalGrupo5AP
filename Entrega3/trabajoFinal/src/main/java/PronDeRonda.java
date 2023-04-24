@@ -29,10 +29,10 @@ public class PronDeRonda {
     }
 
     // El archivo csv debe estar guardado en la carpeta "resources"
-    public void cargarPronostico(String nombre) throws IOException, SQLException {
+    public void cargarPronostico(String dni) throws IOException, SQLException {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/resultados","root","lapaloma");
         Statement st = conn.createStatement();
-        ResultSet rs = st.executeQuery("Select * from pronosticos where participante = "+ nombre);
+        ResultSet rs = st.executeQuery("Select * from pronosticos where participante = "+ dni);
         if (conn != null) {
             while (rs.next()) {
 
@@ -40,7 +40,7 @@ public class PronDeRonda {
                 String equipo2 = rs.getString("equipo2");
                 String participante = rs.getString("participante");
                 Resultado resultado = null;
-                if (rs.getString("gana1").contains("x")) {
+                if (()(rs.getString("gana1").contains("x")) {
                     resultado = Resultado.GANO1;
                 }
 

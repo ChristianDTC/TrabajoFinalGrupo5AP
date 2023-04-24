@@ -13,8 +13,9 @@ public class Principal {
         torneo.agregarRondas(3);
         participantes.cargarPersonas();
         boletas.agregarPronRonda(participantes);
-
-
+        participantes.cargarPuntaje(torneo, boletas);
+        System.out.println(torneo.getRondas().get(2).getPartidos().get(0).getResultado());
+        System.out.println(torneo.getRondas().get(2).getPartidos().get(0).getEquipo2());
         if (torneo.getRondas().get(0).getPartidos() == null) {
             System.out.println("Error: no se cargó ningún partido");
         } else System.out.println("Se cargaron " + torneo.cantidadRondas() + " rondas.");
@@ -22,16 +23,8 @@ public class Principal {
         System.out.println("Se cargaron " + torneo.getTodosLosPartidos().size() + " partidos.");
         System.out.println("Se cargaron " + boletas.todosLosPronosticos() + " pronosticos.");
         System.out.println("Participaron " + participantes.getPersonas().size() + " personas");
-        participantes.cargarPuntaje(torneo, boletas);
+        System.out.println("\n");
         System.out.println(participantes.getPersonas());
-
-
-
-
-
-
-
-
 
     }
 }

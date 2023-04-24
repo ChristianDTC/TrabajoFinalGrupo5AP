@@ -18,7 +18,7 @@ public class Torneo {
 
         for (int j = 1; j <= i ; j++) {
             Ronda ronda = new Ronda();
-            ronda.cargarPartido(j);
+            ronda.cargarPartidos(j);
             rondas.add(ronda);
         }
 

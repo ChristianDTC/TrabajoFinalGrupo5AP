@@ -22,10 +22,10 @@ public class Persona {
     @Override
     public String toString() {
         return "Persona{" +
-                "\n dni=" + dni +
-                "\n nombre='" + nombre + '\'' +
-                "\n apellido='" + apellido + '\'' +
-                "\n puntaje=" + puntaje +
+                "\n DNI=" + dni +
+                "\n NOMBRE='" + nombre + '\'' +
+                "\n APELLIDO='" + apellido + '\'' +
+                "\n PUNTAJE=" + puntaje +
                 '}'+"\n\n" ;
     }
 

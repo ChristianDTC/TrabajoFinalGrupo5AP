@@ -1,3 +1,5 @@
+import lombok.Getter;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,13 +10,14 @@ import java.util.Scanner;
 
 // ArrayList con los pronosticos de una persona.
 //Pregunta: El ArrayList no se declara sino hasta que se comprueba que el archivo existe. ¿Está bien o es mejor declarla al comienzo
-
+@Getter
 public class Ronda {
     private ArrayList<Partido> partidos;
-
+    private int numeroRonda = 0;
     public Ronda() {
         partidos = new ArrayList<>();
     }
+    //agregar atributo numero de ronda
 
     public ArrayList<Partido> getPartidos() {
         return partidos;
@@ -29,7 +32,7 @@ public class Ronda {
     }
 
     // El archivo csv debe estar guardado en la carpeta "resources"
-    public void cargarPartido(int i) throws IOException, SQLException {
+    public void cargarPartidos(int i) throws IOException, SQLException {
 
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/resultados","root","lapaloma");
         Statement st = conn.createStatement();
