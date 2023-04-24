@@ -1,0 +1,8 @@
+{
+"urlDB":"jdbc:mysql://localhost/entrega3",
+"userDB":"root",
+"rootPasswordDB":"leinad",
+"ptsAcierto":2,
+"ptsRonda":50,
+"ptsFase":250
+}
